@@ -28,6 +28,7 @@ class App extends React.Component {
       }
     ]
   }
+  //Toggle complete
   markComplete = id => {
     this.setState({
       todos: this.state.todos.map(todo => {

@@ -41,8 +41,20 @@ class App extends React.Component {
       })
     })
   }
+
+  //Delete Todo
+  delTodo = id => {
+    this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
+  }
+
   render() {
-    return <Todos todos={this.state.todos} markComplete={this.markComplete} />
+    return (
+      <div className="App">
+        <Header />
+        <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
+        <Footer />
+      </div>
+    )
   }
 }
 

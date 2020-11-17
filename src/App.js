@@ -1,5 +1,7 @@
 import React from "react"
+import Header from "./components/layout/Header"
 import Todos from "./components/Todos"
+import Footer from "./components/layout/Footer"
 
 import "./App.css"
 

@@ -50,12 +50,24 @@ class App extends React.Component {
     this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
   }
 
+  //Add Todo
+  addTodo = title => {
+    const newTodo = {
+      id: uuid(),
+      title,
+      completed: false
+    }
+    this.setState({ todos: [...this.state.todos, newTodo] })
+  }
   render() {
     return (
       <div className="App">
-        <Header />
-        <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
-        <Footer />
+        <div className="container">
+          <Header />
+          <AddTodo addTodo={this.addTodo} />
+          <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
+          <Footer />
+        </div>
       </div>
     )
   }

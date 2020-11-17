@@ -7,7 +7,12 @@ const headerStyle = {
   padding: "10px"
 }
 function Header() {
-  return <header style={headerStyle}>Todo List</header>
+  return (
+    <header style={headerStyle}>
+      <h1>Todo List</h1>
+      <small>&copy; 2020</small>
+    </header>
+  )
 }
 
 export default Header

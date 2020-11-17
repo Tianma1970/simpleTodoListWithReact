@@ -7,6 +7,10 @@ const headerStyle = {
   textAlign: "center",
   padding: "10px"
 }
+const linkStyle = {
+  color: "#fff",
+  textDecoration: "none"
+}
 function Header() {
   return (
     <header style={headerStyle}>
@@ -20,10 +24,6 @@ function Header() {
       </Link>
     </header>
   )
-}
-const linkStyle = {
-  color: "#fff",
-  textDecoration: "none"
 }
 
 export default Header
